@@ -7,11 +7,11 @@ use warnings;
 
 use base qw| Catalyst::Controller::FormBuilder |;
 
-__PACKAGE__->mk_accessors(qw| _multiform_setup |);
-
-our %DEFAULTS = 
+my %DEFAULTS = 
 (
-  stash_name => 'forms',
+  stash_name  => 'forms',
+  template    => 'TT',
+  action      => undef,
 );
 
 sub __setup
@@ -23,17 +23,19 @@ sub __setup
   # Add config options to our accesor
   foreach my $option ( keys %DEFAULTS )
   { 
-    $self->_multiform_setup({ $option => $config->{$option} || $DEFAULTS{$option} }); 
+    __PACKAGE__->mk_accessors( "_$option" );
+    $self->set( "_$option", $config->{$option} || $DEFAULTS{$option} ); 
   }
   
+  # Set the action class based on our package name and template type unless
+  # one was already set already
+  $self->_action( __PACKAGE__ . '::Action::' . $self->_template ) unless defined $self->_action;
+  
+  # Call the parent's setup method
   $self->SUPER::__setup();
   
-  # Overwrite the action value in the parent's accessor, unless someone has
-  # set one in the parent's config
-  if ( not defined $self->config->{'Controller::FormBuilder'}->{action} )
-  {
-    $self->_fb_setup->{action} = __PACKAGE__ . '::Action::' . $self->_fb_setup->{template_type};
-  }
+  # Override the parent's action class, so that it goes to our multiform action instead
+  $self->_fb_setup->{action} = $self->_action;
 }
 
 1;

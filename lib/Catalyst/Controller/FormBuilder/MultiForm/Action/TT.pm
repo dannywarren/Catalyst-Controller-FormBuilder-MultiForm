@@ -17,7 +17,7 @@ sub setup_template_vars
   # Get configuration data from our formbuilder instance
   my $stash_name     = $controller->_fb_setup->{stash_name};
   my $obj_name       = $controller->_fb_setup->{obj_name};
-  my $multiform_name = $controller->_multiform_setup->{stash_name};
+  my $multiform_name = $controller->_stash_name;
   
   # If a form name is defined, create aliases to this form in our forms hash
   if ( defined $form_name )
