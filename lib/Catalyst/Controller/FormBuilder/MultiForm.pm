@@ -1,6 +1,6 @@
 package Catalyst::Controller::FormBuilder::MultiForm;
 
-our $VERSION = '0.01_1';
+our $VERSION = '0.01';
 
 use strict;
 use warnings;
@@ -225,8 +225,9 @@ It would be handy to be able to generate multiple forms on the fly with
 this module.  For example, you could make an AJAX call to generate a series
 of "create" forms on the fly.
 
-However, because FormBuilder does not enforce unique field names at the
-moment, this functionality will not be available in MultiForm.
+However, because L<CGI::FormBuilder|CGI::FormBuilder> does not yet support 
+unique field names on the fly, this functionality will not be available in 
+MultiForm.
 
 =head1 SEE ALSO
 

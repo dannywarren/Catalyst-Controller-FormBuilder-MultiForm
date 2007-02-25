@@ -10,6 +10,6 @@ WriteMakefile(
     ABSTRACT     => 'Multiple forms per template with FormBuilder',
     PREREQ_PM    => {
                      'Test::Simple' => 0.44,
-                     'Catalyst::Controller::FormBuilder' => 0.02,
+                     'Catalyst::Controller::FormBuilder' => 0.03,
                     },
 );
