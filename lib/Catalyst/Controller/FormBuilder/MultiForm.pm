@@ -9,9 +9,9 @@ use base qw| Catalyst::Controller::FormBuilder |;
 
 my %DEFAULTS = 
 (
-  stash_name  => 'forms',
-  template    => 'TT',
-  action      => undef,
+  stash_name    => 'forms',
+  template_type => 'TT',
+  action        => undef,
 );
 
 sub __setup
@@ -29,7 +29,7 @@ sub __setup
   
   # Set the action class based on our package name and template type unless
   # one was already set already
-  $self->_action( __PACKAGE__ . '::Action::' . $self->_template ) unless defined $self->_action;
+  $self->_action( __PACKAGE__ . '::Action::' . $self->_template_type ) unless defined $self->_action;
   
   # Call the parent's setup method
   $self->SUPER::__setup();
@@ -174,9 +174,16 @@ you would do so as follows:
 
   MyApp->config
   (
+    # Define config options specific to MultiForm
     'Controller::FormBuilder::MultiForm' => 
     {
       stash_name => 'lots_of_forms_in_here',
+      template_type => 'TT',
+    }
+    # Define any regular FormBuilder config options
+    'Controller::FormBuilder' => 
+    {
+      # ..
     }
   );
 
@@ -193,6 +200,18 @@ Not applicable for HTML::Template view.
 Please note that this option does not effect FormBuilder's stash_name option in any way.  You are safe to set each option as you please in the appropriate configuration section.
 
 Default: C<forms>
+
+=back
+
+=over
+
+=item C<template_type>
+
+Defines the Catalyst View that the stash will be prepared for.
+
+Possible values are: C<HTML::Template>, C<Mason> or C<TT>.
+
+Default: C<TT>
 
 =back
 
