@@ -8,4 +8,5 @@ Revision history for Perl module Catalyst::Controller::FormBuilder::MultiForm
 * Added proper tests based on Catalyst::Controller::FormBuilder test app
 
 0.02 2007.02.26
-* Removed FindBin from prereqs, forgot this comes bundled with perl
+* Removed FindBin from makefile prereqs, forgot this comes bundled with perl
+* Cleaned up test names
