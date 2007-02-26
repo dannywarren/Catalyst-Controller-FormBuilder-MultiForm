@@ -159,6 +159,7 @@ template variables in HTML::Template..
 Example of rendering a form named C<foo> in L<HTML::Template|HTML::Template>:
 
   <tmpl_var foo-form-start>
+  <tmpl_var foo-form-statetags>
   <tmpl_var foo-label-username> <tmpl_var foo-field-username>
   <tmpl_var foo-label-password> <tmpl_var foo-field-password>
   <tmpl_var foo-form-submit>
