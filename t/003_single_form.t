@@ -16,22 +16,22 @@ my $page = "test/one_form";
 $mech->get_ok( "http://localhost/$page", "GET /$page" );
 
 my $foo_form = $mech->form_name('foo');
-ok( $foo_form, "Form found" ) or BAIL_OUT( "Can't do anything without a form!" );
+ok( $foo_form, "Form found" ) or BAIL_OUT( "Cannot locate MultiForm form, unable to continue tests" );
 
 my $foo_one = $foo_form->find_input( 'foo_one' );
-ok( $foo_one, "First input field found");
+ok( $foo_one, "First input field found in MultiForm form");
 
 my $foo_two = $foo_form->find_input( 'foo_two' );
-ok( $foo_two, "Second input field found");
+ok( $foo_two, "Second input field found in MultiForm form");
 
 $foo_one->value('foo_one_value');
-is( $foo_one->value, 'foo_one_value', "Set first input field value" );
+is( $foo_one->value, 'foo_one_value', "Set first input field value in MultiForm form" );
 
 $foo_two->value('foo_two_value');
-is( $foo_two->value, 'foo_two_value', "Set second input field value" );
+is( $foo_two->value, 'foo_two_value', "Set second input field value in MultiForm form" );
 
 $mech->submit;
 
-like( $mech->content, qr/form:foo/, "Form submitted correctly" );
-like( $mech->content, qr/foo_one:foo_one_value/, "First input value submitted correctly" );
-like( $mech->content, qr/foo_two:foo_two_value/, "Second input value submitted correctly" );
+like( $mech->content, qr/form:foo/, "MultiForm form submitted correctly" );
+like( $mech->content, qr/foo_one:foo_one_value/, "First input value submitted in MultiForm form" );
+like( $mech->content, qr/foo_two:foo_two_value/, "Second input value submitted in MultiForm form" );
