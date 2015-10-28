@@ -25,6 +25,12 @@ WriteMakefile
 
   'META_MERGE' =>
   {
+    'recommends' =>
+    {
+      'Catalyst::View::TT' => "0.44",
+      'HTML::Template'     => "2.95",
+      'Mason'              => "2.24",
+    },
     'resources' => 
     {
       'homepage'   => "https://github.com/dannywarren/Catalyst-Controller-FormBuilder-MultiForm",
