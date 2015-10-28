@@ -6,7 +6,7 @@ lib/Catalyst/Controller/FormBuilder/MultiForm/Action/TT.pm
 LICENSE
 Makefile.PL
 MANIFEST
-README
+README.pod
 t/001_load.t
 t/002_formbuilder_form.t
 t/003_multiform_form.t
