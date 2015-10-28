@@ -3,19 +3,19 @@ use ExtUtils::MakeMaker;
 WriteMakefile 
 (
 
-  'NAME'          => "Catalyst::Controller::FormBuilder::MultiForm",
-  'AUTHOR'        => "Danny Warren <danny\@dannywarren.com>",
-  'LICENSE'       => "perl",
-  'VERSION_FROM'  => "lib/Catalyst/Controller/FormBuilder/MultiForm.pm",
-  'ABSTRACT_FROM' => "lib/Catalyst/Controller/FormBuilder/MultiForm.pm",
+  NAME          => "Catalyst::Controller::FormBuilder::MultiForm",
+  AUTHOR        => "Danny Warren <danny\@dannywarren.com>",
+  LICENSE       => "perl",
+  VERSION_FROM  => "lib/Catalyst/Controller/FormBuilder/MultiForm.pm",
+  ABSTRACT_FROM => "lib/Catalyst/Controller/FormBuilder/MultiForm.pm",
 
-  'PREREQ_PM' =>
+  PREREQ_PM =>
   {
     'Catalyst::Controller::FormBuilder' => "0.03",
     'Catalyst::Runtime'                 => "5.7",
   },
 
-  'TEST_REQUIRES' => 
+  TEST_REQUIRES => 
   {
     'Test::Simple'                   => "0.44",
     'Test::WWW::Mechanize::Catalyst' => "0.37",
@@ -23,18 +23,18 @@ WriteMakefile
     'Catalyst::View::TT'             => "0.44",
   },
 
-  'META_MERGE' =>
+  META_MERGE =>
   {
-    'recommends' =>
+    recommends =>
     {
       'Catalyst::View::TT' => "0.44",
       'HTML::Template'     => "2.95",
       'Mason'              => "2.24",
     },
-    'resources' => 
+    resources => 
     {
-      'homepage'   => "https://github.com/dannywarren/Catalyst-Controller-FormBuilder-MultiForm",
-      'repository' => "https://github.com/dannywarren/Catalyst-Controller-FormBuilder-MultiForm",
+      homepage   => "https://github.com/dannywarren/Catalyst-Controller-FormBuilder-MultiForm",
+      repository => "https://github.com/dannywarren/Catalyst-Controller-FormBuilder-MultiForm",
     },
   },
 
