@@ -20,6 +20,7 @@ WriteMakefile
     'Test::Simple'                   => "0.44",
     'Test::WWW::Mechanize::Catalyst' => "0.37",
     'Class::Inspector'               => "1.16",
+    'Catalyst::View::TT'             => "0.44",
   },
 
   'META_MERGE' =>
