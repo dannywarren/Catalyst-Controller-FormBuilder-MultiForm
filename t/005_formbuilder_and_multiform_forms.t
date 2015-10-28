@@ -1,6 +1,4 @@
-# -*- perl -*-
-
-# t/004_all_forms.t
+# t/005_formbuilder_and_multiform_forms.t
 #   verify that we can access and submit multiple forms using standard
 #   FormBuilder methods AND by name using MultiForm on a single page
 

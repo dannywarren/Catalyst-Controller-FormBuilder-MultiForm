@@ -1,6 +1,4 @@
-# -*- perl -*-
-
-# t/002_standard_form.t
+# t/002_formbuilder_form.t
 #   verify that standard Catalyst::Controller::FormBuilder behaviour still 
 #   works in MultiForm
 

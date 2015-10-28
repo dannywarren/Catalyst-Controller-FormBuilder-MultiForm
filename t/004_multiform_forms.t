@@ -1,6 +1,4 @@
-# -*- perl -*-
-
-# t/004_multiple_forms.t
+# t/004_multiform_forms.t
 #   verify that we can access and submit multiple forms by name using 
 #   MultiForm functionality
 

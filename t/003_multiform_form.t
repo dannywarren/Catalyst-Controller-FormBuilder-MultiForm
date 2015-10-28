@@ -1,6 +1,4 @@
-# -*- perl -*-
-
-# t/003_single_form.t
+# t/003_multiform_form.t
 #   verify that we can access and submit a single form by name using 
 #   MultiForm functionality
 
