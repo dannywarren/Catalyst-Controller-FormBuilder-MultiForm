@@ -261,6 +261,10 @@ MultiForm.
 
 =back
 
+=head1 CREDITS
+
+Thanks to Juan Camacho for his help with this, and for his great L<Catalyst::Controller::FormBuilder> module.
+
 =head1 AUTHOR
 
 Danny Warren <danny@dannywarren.com>
@@ -268,10 +272,6 @@ Danny Warren <danny@dannywarren.com>
 =head1 COPYRIGHT
 
 Copyright (c) 2015, L</"AUTHOR">.
-
-=head1 CREDITS
-
-Thanks to Juan Camacho for his help with this, and for his great L<Catalyst::Controller::FormBuilder> module.
 
 =head1 LICENSE
 
