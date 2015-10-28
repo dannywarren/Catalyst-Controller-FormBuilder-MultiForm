@@ -13,7 +13,7 @@ WriteMakefile
 
   PREREQ_PM =>
   {
-    'Catalyst::Controller::FormBuilder' => "0.03",
+    'Catalyst::Controller::FormBuilder' => "0.06",
     'Catalyst::Runtime'                 => "5.7",
   },
 
