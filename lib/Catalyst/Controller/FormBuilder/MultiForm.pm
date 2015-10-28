@@ -1,6 +1,6 @@
 package Catalyst::Controller::FormBuilder::MultiForm;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use strict;
 use warnings;
@@ -156,7 +156,7 @@ of your form, like C<[form name]-[formbuilder template variable]>.
 See L<CGI::FormBuilder::Template::HTML> for information about FormBuilder
 template variables in HTML::Template..
 
-Example of rendering a form named C<foo> in L<HTML::Template|HTML::Template>:
+Example of rendering a form named C<foo> in L<HTML::Template>:
 
   <tmpl_var foo-form-start>
   <tmpl_var foo-form-statetags>
@@ -245,30 +245,34 @@ It would be handy to be able to generate multiple forms on the fly with
 this module.  For example, you could make an AJAX call to generate a series
 of "create" forms on the fly.
 
-However, because L<CGI::FormBuilder|CGI::FormBuilder> does not yet support 
+However, because L<CGI::FormBuilder> does not yet support 
 unique field names on the fly, this functionality will not be available in 
 MultiForm.
 
 =head1 SEE ALSO
 
-L<Catalyst::Controller::FormBuilder|Catalyst::Controller::FormBuilder>, 
-L<CGI::FormBuilder|CGI::FormBuilder>, 
-L<Catalyst::Manual|Catalyst::Manual>
+=over
+
+=item L<Catalyst::Controller::FormBuilder>
+=item L<CGI::FormBuilder>
+=item L<Catalyst::Manual>
+
+=back
 
 =head1 AUTHOR
 
-Danny Warren <perl@dannywarren.com>
+Danny Warren <danny@dannywarren.com>
+
+=head1 COPYRIGHT
+
+Copyright (c) 2015, L</"AUTHOR">.
 
 =head1 CREDITS
 
-Thanks to Juan Camacho for his help with this, and for his great
-Catalyst::Controller::FormBuilder module.
+Thanks to Juan Camacho for his help with this, and for his great L<Catalyst::Controller::FormBuilder> module.
 
 =head1 LICENSE
 
-Copyright (c) 2007 Danny Warren. All rights reserved.
-
-This library is free software, you can redistribute it and/or modify it under
-the same terms as Perl itself.
+This library is free software, you can redistribute it and/or modify it under the same terms as Perl itself.
 
 =cut
