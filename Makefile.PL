@@ -1,5 +1,7 @@
 use ExtUtils::MakeMaker;
 
+my $readme = 'podselect $(VERSION_FROM) > README.pod';
+
 WriteMakefile 
 (
 
@@ -37,5 +39,10 @@ WriteMakefile
       repository => "https://github.com/dannywarren/Catalyst-Controller-FormBuilder-MultiForm",
     },
   },
+
+  dist => 
+  {
+    PREOP => $readme,
+  }
 
 );
