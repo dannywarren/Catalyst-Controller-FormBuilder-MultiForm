@@ -1,6 +1,7 @@
 package Catalyst::Controller::FormBuilder::MultiForm::Action::HTML::Template;
 
 use strict;
+use warnings;
 
 use base qw| Catalyst::Controller::FormBuilder::Action::HTML::Template |;
 

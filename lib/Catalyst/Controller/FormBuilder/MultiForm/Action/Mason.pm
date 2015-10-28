@@ -1,6 +1,7 @@
 package Catalyst::Controller::FormBuilder::MultiForm::Action::Mason;
 
 use strict;
+use warnings;
 
 use base qw| Catalyst::Controller::FormBuilder::Action::Mason |;
 
