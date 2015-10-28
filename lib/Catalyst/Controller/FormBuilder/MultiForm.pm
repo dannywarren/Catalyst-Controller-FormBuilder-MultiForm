@@ -254,7 +254,9 @@ MultiForm.
 =over
 
 =item L<Catalyst::Controller::FormBuilder>
+
 =item L<CGI::FormBuilder>
+
 =item L<Catalyst::Manual>
 
 =back
